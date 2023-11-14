@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   <!-- chart.js -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="filter-box">
+            <form method="post">
+                <ul class="filter-list">
+                    <li>
+                        <label class="filter-label">Filter</label>
+                    </li>
+                    <li>
+                        <button class="filter-button" formaction="/filter=end_year">End year</button>
+                    </li>
+                    <li>
+                        <button class="filter-button" formaction="/filter=topic">Topic</button>
+                    </li>
+                    <li>
+                        <button class="filter-button" formaction="/filter=sector">Sector</button>
+                    </li>
+                    <li>
+                        <button class="filter-button" formaction="/filter=region">Region</button>
+                    </li>
+                    <li>
+                        <button class="filter-button" formaction="/filter=pestle">Pestle</button>
+                    </li>
+                    <li>
+                        <button class="filter-button"  formaction="/filter=source">Source</button>
+                    </li>
+                    <li>
+                        <button class="filter-button" formaction="/filter=country">Country</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        {%if data%}
+        <p class="data-selected">Hovering over the column displays the title of the entry.</p>
+        <div class="chart-and-options">
+            <div class="chart-container">
+                <p class="hidden-data" style="display:none">{{data}}</p>
+                <canvas id="barchart"></canvas>
+            </div>
+            <div class="y-factor-box">
+                <ul>
+                    <li><button class="y-axis-buttons">Intensity</button></li>
+                    <li><button class="y-axis-buttons">Relevance</button></li>
+                    <li><button class="y-axis-buttons">Likelihood</button></li>
+                </ul>
+            </div>
+        </div>
+        {%endif%}
+    </div>
+    {%if data==None%}
+    <p class="data-selected">Please Select a category/option to view chart</p>
+    {%endif%}
+<script src="/static/master.js"></script>
+</body>
+</html>

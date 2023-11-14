@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    height:100%;
+    overflow-x:hidden;
+}
+
+ul{
+    list-style-type:none;
+}
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height:100%;
+}
+
+.filter-box {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    height:10%;
+}
+
+.filter-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.filter-list li {
+    display: inline;
+}
+
+.filter-button {
+    background-color: #555; /* Button background color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    width:140px;
+    transition: background-color 0.3s;
+}
+.filter-button:hover {
+    background-color: #777;
+}
+
+canvas {
+    max-width: 100%;
+}
+.available-filter-container{
+margin:10px;
+}
+.available-filter-button{
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin:10px;
+    width:200px;
+    height:50px;
+}
+.available-filter-button:hover{
+    background-color: #777;
+}
+.available-filters{
+    display:flex;
+    flex-wrap: wrap;
+    max-height:90%;
+    list-style-type:none;
+
+}
+.filter-label{
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    width:90px;
+    transition: background-color 0.3s;
+}
+.chart-container {
+    display:inline-block;
+    left:10%;
+    width: 70%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.y-factor-box{
+    position:fixed;
+    top:20%;
+    width:200px;
+    display:inline-block;
+    padding:10px;
+    right:20px;
+}
+.y-factor-box button{
+    background-color: #555;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin:10px;
+    width:120px;
+    height:30px;
+
+}
+.y-factor-box button:hover{
+
+    background-color: #777;
+}
+.chart-and-options{
+    width:100%;
+    height:70%;
+}
+.data-selected{
+
+    text-align:center;
+    color:red;
+    margin:10px;
+}

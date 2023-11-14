@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   <!-- chart.js -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="filter-box">
+            <form method="post">
+                <ul class="filter-list">
+                    <li>
+                        <label class="filter-label">Filter</label>
+                    </li>
+                    <li>
+                        <button class="filter-button" formaction="/filter=end_year">End year</button>
+                    </li>
+                    <li>
+                        <button class="filter-button" formaction="/filter=topic">Topic</button>
+                    </li>
+                    <li>
+                        <button class="filter-button" formaction="/filter=sector">Sector</button>
+                    </li>
+                    <li>
+                        <button class="filter-button" formaction="/filter=region">Region</button>
+                    </li>
+                    <li>
+                        <button class="filter-button" formaction="/filter=pestle">Pestle</button>
+                    </li>
+                    <li>
+                        <button class="filter-button"  formaction="/filter=source">Source</button>
+                    </li>
+                    <li>
+                        <button class="filter-button" formaction="/filter=country">Country</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <br>
+        <p class="data-selected">Please Select a category/option to view chart</p>
+        {% if type=='end_year' %}
+        <div class="available-filter-container">
+            <form method="post">
+                <ul class="available-filters">
+                    {% for x in variables  %}
+                        <li><button class="available-filter-button" formaction="/filter?end_year={{x}}">{{x}}</button></li>
+                    {% endfor %}
+                </ul>
+            </form>
+        </div >
+        {% endif %}
+        {% if type=='topic' %}
+        <div class="available-filter-container">
+            <form method="post">
+                <ul class="available-filters">
+                    {% for x in variables  %}
+                        <li><button class="available-filter-button" formaction="/filter?topic={{x}}">{{x}}</button></li>
+                    {% endfor %}
+                </ul>
+            </form>
+        </div>
+        {% endif %}
+        {% if type=='sector' %}
+        <div class="available-filter-container">
+            <form method="post">
+                <ul class="available-filters">
+                    {% for x in variables  %}
+                        <li><button class="available-filter-button" formaction="/filter?sector={{x}}">{{x}}</button></li>
+                    {% endfor %}
+                </ul>
+            </form>
+        </div>
+        {% endif %}
+        {% if type=='region' %}
+        <div class="available-filter-container">
+            <form method="post">
+                <ul class="available-filters">
+                    {% for x in variables %}
+                        <li><button class="available-filter-button" formaction="/filter?region={{x}}">{{x}}</button></li>
+                    {% endfor %}
+                </ul>
+            </form>
+        </div>
+        {% endif %}
+        {% if type=='pestle' %}
+
+        <div class="available-filter-container">
+            <form method="post">
+                <ul class="available-filters">
+                    {% for x in variables %}
+                        <li><button class="available-filter-button" formaction="/filter?pestle={{x}}">{{x}}</button></li>
+                    {% endfor %}
+                </ul>
+            </form>
+        </div>
+        {% endif %}
+        {% if type=='source' %}
+        <div class="available-filter-container">
+            <form method="post">
+                <ul class="available-filters">
+                    {% for x in variables %}
+                        <li><button class="available-filter-button" formaction="/filter?source={{x}}">{{x}}</button></li>
+                    {% endfor %}
+                </ul>
+            </form>
+        </div>
+        {% endif %}
+        {% if type=='country' %}
+        <div class="available-filter-container">
+            <form method="post">
+                <ul class="available-filters">
+                    {% for x in variables%}
+                        <li><button class="available-filter-button" formaction="/filter?country={{x}}">{{x}}</button></li>
+                    {% endfor %}
+                </ul>
+            </form>
+        </div>
+        {% endif %}
+    </div>
+<script src="/static/master.js"></script>
+</body>
+</html>
