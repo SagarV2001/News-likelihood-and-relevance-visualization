@@ -1,4 +1,4 @@
 1. The main script to run the server is "script.py".
 2. File "mongo.py" is associated with database calls and storing json procedures.
-3. Template forlder contains html files to be rendered.
+3. Template folder contains html files to be rendered.
 4. Static contain all the css and javascript files.
